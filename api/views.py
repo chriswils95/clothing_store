@@ -13,6 +13,15 @@ class ItemView(generics.ListAPIView):
     queryset = Items.objects.all()
     serializer_class = ItemSerializer
 
+class DeleteView(APIView):
+  def delete(self, request, format=None):
+     if not self.request.session.exists(self.request.session.session_key):
+            self.request.session.create() 
+     print("Another One")
+     Items.objects.all().delete()
+     print("ok One")
+     return Response(status=status.HTTP_200_OK)
+
 
 class CreateItemsView(APIView):
     serializer_class = ItemSerializer
