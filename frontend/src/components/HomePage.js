@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Grid, Button, ButtonGroup, Typography } from "@material-ui/core";
+import { Grid, Button, ButtonGroup, Typography, requirePropFactory } from "@material-ui/core";
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,6 +7,7 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
+
 
 export default class HomePage extends Component {
   constructor(props) {
@@ -28,22 +29,16 @@ export default class HomePage extends Component {
   // }
 
   renderHomePage() {
+    console.log("public is: ", process.env);
     return (
       <Grid container spacing={3}>
         <Grid item xs={12} align="center">
           <Typography variant="h3" compact="h3">
-            House Party
+            Welcome to Chris Clothing Store
           </Typography>
         </Grid>
-        <Grid item xs={12} align="center">
-          <ButtonGroup disableElevation variant="contained" color="primary">
-            <Button color="primary" to="/join" component={Link}>
-              Join a Room
-            </Button>
-            <Button color="secondary" to="/create" component={Link}>
-              Create a Room
-            </Button>
-          </ButtonGroup>
+        <Grid item xs={12}>
+          <img src={require('../images/1525.jpg').default} height="100" width="100" ></img>
         </Grid>
       </Grid>
     );
