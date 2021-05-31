@@ -38,7 +38,7 @@ export default class HomePage extends Component {
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          <img src={require('../images/1525.jpg').default} height="100" width="100" ></img>
+          {/* <img src={require('../images/1525.jpg').default} height="100" width="100" ></img> */}
         </Grid>
       </Grid>
     );

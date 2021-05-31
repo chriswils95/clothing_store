@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import HomePage from "./HomePage";
+import ItemPage from "./ItemPage"
+import ItemsPage from "./ItemsPage";
 
 export default class App extends Component {
   constructor(props) {
@@ -10,7 +12,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <HomePage />
+        <ItemsPage />
       </div>
     );
   }
