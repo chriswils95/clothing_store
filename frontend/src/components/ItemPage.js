@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   });
   
 
-  export default function ItemPage() {
+  export default function ItemPage(props) {
     const classes = useStyles();
     const [text, setText] = useState("Photos");
     const [auth, setAuth] = useState(true);
@@ -32,7 +32,7 @@ const useStyles = makeStyles({
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image={require('../flowers/daisy/5547758_eea9edfd54_n.jpg').default}
+            image={require("../flowers/" + props.category + "/" + props.item_id + '.jpg').default}
             title="1164"
           />
         </CardActionArea>
